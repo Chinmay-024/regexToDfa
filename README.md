@@ -1,3 +1,7 @@
+Name - Chinmay Negi
+
+Roll No - 20CS01011
+
 # Conversion from Regex to DFA
 
 One script converts a regular expression (regex) into a Non-Deterministic Finite Automaton (NFA) and saves the NFA in JSON format. It also generates a graph representation of the NFA using Graphviz. Then another script converts epsilon NFA to NFA. Third one converts NFA to DFA and we also first simplify the nfa by removing dead states. Finally we also have a simulator to check if string belong in regex.
