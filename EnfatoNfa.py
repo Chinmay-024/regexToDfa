@@ -13,6 +13,10 @@ def epsilon_closure(state, epsilon_transitions):
                 stack.append(transition[2])
     return closure
 
+def dfa():
+    global nfa
+    
+
 def convert_epsilon_nfa_to_nfa(epsilon_nfa):
     epsilon_transitions = [(src, letter, dest) for src, letter, dest in epsilon_nfa['transition_function'] if letter == 'ε']
 
