@@ -230,7 +230,7 @@ def output_nfa():
     with open(sys.argv[1], 'w') as outjson:
         outjson.write(json.dumps(nfa, indent = 4))
     graph = generate_transition_graph(nfa["transition_function"])
-    graph.render(filename='transition_graph', view=True)
+    graph.render(filename='epsilon_nfa', view=True)
 
 def generate_transition_graph(transition_function):
     global nfa

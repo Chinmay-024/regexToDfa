@@ -12,9 +12,6 @@ def epsilon_closure(state, epsilon_transitions):
             if transition[0] == current_state and transition[1] == 'ε' and transition[2] not in closure:
                 stack.append(transition[2])
     return closure
-
-def dfa():
-    global nfa
     
 
 def convert_epsilon_nfa_to_nfa(epsilon_nfa):
@@ -68,7 +65,7 @@ def convert_epsilon_nfa_to_nfa(epsilon_nfa):
         'final_states': list(nfa['final_states'])
     }
     graph = generate_transition_graph()
-    graph.render(filename='transition_graph_nfa', view=True)
+    graph.render(filename='nfa', view=True)
     output_nfa(final_nfa)
     return final_nfa
 

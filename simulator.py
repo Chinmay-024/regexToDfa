@@ -17,7 +17,6 @@ def dfs(dfa, current_state, visited_states, exp ,index):
         
     letter = exp[index]   
     transitions = [t[2] for t in dfa['transition_function'] if t[0] == current_state and t[1] == letter]
-    print(transitions)
     
     for state in transitions:
             if dfs(dfa, state, visited_states,exp,index+1):

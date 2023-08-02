@@ -95,9 +95,7 @@ def nfaTOdfa(nfa):
         final_dfa['transition_function'].append([ss,l,es])
 
     graph = generate_transition_graph(final_dfa)
-    graph.render(filename='transition_graph', view=True)
-    # print(dfa)
-    # print(final_dfa)
+    graph.render(filename='dfa', view=True)
 
 def out_dfa():
     global final_dfa
@@ -132,7 +130,6 @@ if __name__ == "__main__":
     load_nfa()
     nfa = remove_dead_states(nfa)
     nfaTOdfa(nfa)
-    # print(json.dumps(final_dfa, indent=4))
     out_dfa()
     graph = generate_transition_graph(nfa)
-    graph.render(filename='transition_graph1', view=True)
+    graph.render(filename='simplified_nfa', view=True)
